@@ -1,0 +1,1317 @@
+/* Modern 2025 Design - Global Styles */
+:root {
+    --primary-gradient: linear-gradient(135deg, #00D5FF 0%, #0066cc 100%);
+    --secondary-gradient: linear-gradient(135deg, #FF6B6B 0%, #FF3366 100%);
+    --primary-color: #0066cc;
+    --secondary-color: #FF3366;
+    --accent-color: #00D5FF;
+    --text-color: #2C3E50;
+    --light-bg: #F8FAFC;
+    --white: #ffffff;
+    --dark-bg: #0F172A;
+    --dark-text: #E2E8F0;
+    --dark-card-bg: #1E293B;
+    --dark-accent: #38BDF8;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --neon-glow: 0 0 20px rgba(0, 213, 255, 0.5);
+    --card-hover-transform: translateY(-10px);
+    --transition-speed: 0.3s;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    transition: all 0.3s ease;
+}
+
+/* Modern Glass Effect */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+/* Modern Card Design */
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+/* Enhanced Hero Section */
+.hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+                url('../images/hero-bg.jpg') center/cover, var(--primary-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 213, 255, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    animation: pulse 4s infinite;
+}
+
+.hero-content {
+    max-width: 1000px;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #00D5FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 213, 255, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    animation: slideUp 0.8s ease-out;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* Enhanced Stats Section */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    animation: slideUp 1s ease-out;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 200px;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+    box-shadow: var(--neon-glow);
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 10px rgba(0, 213, 255, 0.3);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Enhanced Scroll Indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll-indicator span {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.hero-scroll-indicator i {
+    font-size: 1.5rem;
+    opacity: 0.6;
+    color: var(--accent-color);
+}
+
+/* Enhanced Fish of the Day Section */
+.fish-of-the-day-section {
+    padding: 8rem 5%;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #E2E8F0 100%);
+}
+
+.fish-of-the-day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.fish-of-the-day-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.fish-of-the-day-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.fish-of-the-day:hover .fish-of-the-day-image img {
+    transform: scale(1.05);
+}
+
+.fish-of-the-day-content {
+    padding: 2rem;
+}
+
+.fish-of-the-day-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fish-of-the-day-content .scientific-name {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.fish-details {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.fish-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.fish-detail-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.fish-detail-item span {
+    font-weight: 500;
+}
+
+.fun-facts {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.fun-facts h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.fun-facts ul {
+    list-style: none;
+}
+
+.fun-facts li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fun-facts li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .fish-of-the-day {
+    background: var(--dark-card-bg);
+}
+
+body.dark-mode .fish-detail-item {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+body.dark-mode .fun-facts {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .fish-of-the-day {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .fish-of-the-day-image img {
+        height: 300px;
+    }
+}
+
+/* Enhanced Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-line {
+    width: 100px;
+    height: 4px;
+    background: var(--primary-gradient);
+    margin: 0 auto;
+    border-radius: 2px;
+    position: relative;
+}
+
+.section-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.section-header:hover .section-line::after {
+    transform: scaleX(1);
+}
+
+/* Enhanced Modern Select */
+.modern-select {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(10px);
+}
+
+.modern-select:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+}
+
+.modern-select:focus {
+    outline: none;
+    box-shadow: var(--neon-glow);
+}
+
+/* Enhanced Modern Button */
+.modern-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modern-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neon-glow);
+}
+
+.modern-button:hover::before {
+    opacity: 1;
+}
+
+.modern-button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Card Icons */
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    transition: transform var(--transition-speed) ease;
+}
+
+.edu-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Enhanced Quiz Section */
+.quiz-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    animation: pulse 2s infinite;
+}
+
+.modern-options {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.modern-options button {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(10px);
+}
+
+.modern-options button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+}
+
+/* Enhanced Footer */
+.modern-footer {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 4rem 5% 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-gradient);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+}
+
+.social-links a:hover::before {
+    opacity: 1;
+}
+
+.social-links a i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .modern-select {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .modern-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .modern-select,
+body.dark-mode .modern-options button {
+    background: rgba(30, 41, 59, 0.5);
+    color: var(--dark-text);
+}
+
+body.dark-mode .stat-item {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+body.dark-mode .social-links a {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Fish Cards */
+.fish-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.fish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--neon-glow);
+}
+
+.fish-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.fish-card:hover img {
+    transform: scale(1.05);
+}
+
+.fish-card h3 {
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    padding: 8rem 5%;
+}
+
+.quiz-container {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: var(--box-shadow);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quiz-button {
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--neon-glow);
+}
+
+.quiz-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 213, 255, 0.7);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .card,
+body.dark-mode .fish-card,
+body.dark-mode .quiz-container {
+    background: var(--dark-card-bg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav-links a {
+    color: var(--dark-text);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+    }
+
+    .nav-links {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    body.dark-mode .nav-links {
+        background: rgba(30, 41, 59, 0.9);
+    }
+}
+
+/* Modern Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 213, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(0, 213, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 213, 255, 0);
+    }
+}
+
+/* Theme Toggle and Mobile Menu */
+.theme-toggle,
+.mobile-menu {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Fish Database Section */
+.fish-database {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filters select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Education Section */
+.education {
+    background-color: var(--light-bg);
+    padding: 5rem 5%;
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edu-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+.edu-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: var(--white);
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 0;
+}
+
+.footer-section a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section a:hover::before {
+    width: 100%;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container input {
+    padding: 1.2rem 2rem;
+    width: 60%;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--neon-glow);
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-container button {
+    padding: 1.2rem 3rem;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 213, 255, 0.7);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    body.dark-mode .nav-links {
+        background: rgba(30, 41, 59, 0.95);
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+    }
+}
+
+/* Enhanced Dark Mode */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .card,
+body.dark-mode .fish-card,
+body.dark-mode .quiz-container,
+body.dark-mode .edu-card {
+    background: var(--dark-card-bg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav-links a {
+    color: var(--dark-text);
+}
+
+body.dark-mode .search-container input {
+    background: rgba(30, 41, 59, 0.5);
+    color: var(--dark-text);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .modern-select,
+body.dark-mode .modern-options button {
+    background: rgba(30, 41, 59, 0.5);
+    color: var(--dark-text);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .stat-item {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+body.dark-mode .social-links a {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+/* Footer Fixes */
+.modern-footer {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 4rem 5% 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Error State */
+.error-message {
+    background: rgba(255, 99, 71, 0.1);
+    border: 1px solid rgba(255, 99, 71, 0.2);
+    color: #ff6347;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Success State */
+.success-message {
+    background: rgba(50, 205, 50, 0.1);
+    border: 1px solid rgba(50, 205, 50, 0.2);
+    color: #32cd32;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Responsive image handling */
+@media (max-width: 768px) {
+    .fish-card img {
+        height: 150px;
+    }
+}
+
+/* Enhanced Modern Links */
+.modern-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modern-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.modern-link:hover {
+    color: var(--primary-color);
+}
+
+.modern-link:hover::after {
+    transform: translateX(5px);
+}

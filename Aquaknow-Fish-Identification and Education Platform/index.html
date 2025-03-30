@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaknow - Fish Identification and Education Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="glass-effect">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Aquaknow</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#database">Database</a>
+                <a href="#education">Learn</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="floating">Discover the Underwater World</h1>
+                <p class="hero-subtitle">Explore and learn about various fish species through our comprehensive database powered by AI</p>
+                <div class="search-container glass-effect">
+                    <input type="text" id="fishSearch" placeholder="Search for a fish species...">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Fish Species</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Habitats</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">AI Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="fishOfTheDay" class="fish-of-the-day-section">
+            <div class="section-header">
+                <h2>Fish of the Day</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="fish-of-the-day">
+                <div class="fish-of-the-day-image">
+                    <img src="images/clownfish.jpg" alt="Clownfish">
+                </div>
+                <div class="fish-of-the-day-content">
+                    <h3>Clownfish</h3>
+                    <p class="scientific-name">Amphiprioninae</p>
+                    <div class="fish-details">
+                        <div class="fish-detail-item">
+                            <i class="fas fa-ruler"></i>
+                            <span>Size: 10-18 cm</span>
+                        </div>
+                        <div class="fish-detail-item">
+                            <i class="fas fa-water"></i>
+                            <span>Habitat: Coral Reef</span>
+                        </div>
+                        <div class="fish-detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Distribution: Indo-Pacific, Red Sea, Great Barrier Reef</span>
+                        </div>
+                        <div class="fish-detail-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Conservation: Least Concern</span>
+                        </div>
+                    </div>
+                    <div class="fun-facts">
+                        <h4>Fun Facts</h4>
+                        <ul>
+                            <li>Can change gender if needed</li>
+                            <li>Immune to anemone stings</li>
+                            <li>Forms hierarchical groups</li>
+                        </ul>
+                    </div>
+                    <a href="#database" class="modern-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="database" class="fish-database">
+            <div class="section-header">
+                <h2>Explore Fish Database</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="filters glass-effect">
+                <select id="categoryFilter" class="modern-select">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="familyFilter" class="modern-select">
+                    <option value="">All Families</option>
+                </select>
+                <select id="habitatFilter" class="modern-select">
+                    <option value="">All Habitats</option>
+                </select>
+            </div>
+            <div class="fish-grid" id="fishGrid">
+                <!-- Fish cards will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <div class="section-header">
+                <h2>Educational Resources</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card glass-effect">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Fish Taxonomy</h3>
+                    <p>Learn about scientific classification and nomenclature</p>
+                    <a href="education/taxonomy.html" class="modern-button">Start Learning <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="edu-card glass-effect">
+                    <div class="card-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Habitats</h3>
+                    <p>Explore different aquatic ecosystems</p>
+                    <a href="education/habitats.html" class="modern-button">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="edu-card glass-effect">
+                    <div class="card-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Species Guide</h3>
+                    <p>Detailed information about fish species</p>
+                    <a href="education/species-guide.html" class="modern-button">View Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="quiz-section">
+            <div class="section-header">
+                <h2>Test Your Knowledge</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="quiz-container glass-effect">
+                <div id="quizStart" class="quiz-start">
+                    <div class="quiz-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Fish Identification Quiz</h3>
+                    <p>Challenge yourself with our interactive quiz</p>
+                    <button id="startQuiz" class="modern-button">Start Quiz <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div id="quizContent" class="quiz-content" style="display: none;">
+                    <div id="quizQuestion"></div>
+                    <div id="quizOptions" class="modern-options"></div>
+                    <div id="quizFeedback"></div>
+                    <button id="nextQuestion" class="modern-button">Next Question <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div id="quizResults" class="quiz-results" style="display: none;">
+                    <h3>Quiz Results</h3>
+                    <div id="quizScore"></div>
+                    <button id="retakeQuiz" class="modern-button">Retake Quiz <i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Aquaknow</h3>
+                <p>A comprehensive platform for fish identification and education powered by advanced AI technology</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#database">Database</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/aquaknow" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/aquaknow" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/aquaknow" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/aquaknow" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="contact-email">info@aquaknow.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aquaknow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html> 
