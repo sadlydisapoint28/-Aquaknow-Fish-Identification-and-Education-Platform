@@ -1,0 +1,438 @@
+/* Education Page Specific Styles */
+
+/* Education Hero Section */
+.education-hero {
+    background: linear-gradient(135deg, var(--ocean-blue), var(--tropical-teal));
+    padding: 8rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="80" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+.education-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.education-hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.education-hero p {
+    font-size: 1.3rem;
+    color: var(--pearl-white);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-decorations {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.decoration {
+    font-size: 3rem;
+    animation: bounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.decoration:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.decoration:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* Education Categories Section */
+.education-categories {
+    padding: 6rem 0;
+    background: var(--pearl-white);
+}
+
+.education-categories h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--deep-ocean);
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--coral-pink);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--coral-pink), var(--warm-sand));
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 60px;
+}
+
+.category-header h3 {
+    font-size: 1.8rem;
+    color: var(--deep-ocean);
+    font-weight: 600;
+}
+
+.category-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.fish-examples h4,
+.category-facts h4 {
+    color: var(--ocean-blue);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.fish-examples ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fish-examples li {
+    background: var(--soft-blue);
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--tropical-teal);
+}
+
+.fish-examples strong {
+    color: var(--deep-ocean);
+}
+
+.category-facts {
+    background: linear-gradient(135deg, var(--sea-foam), var(--soft-blue));
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.category-facts p {
+    margin: 0;
+    color: var(--deep-ocean);
+    font-style: italic;
+}
+
+/* Anatomy Section */
+.anatomy-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--sea-foam), var(--pearl-white));
+}
+
+.anatomy-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--deep-ocean);
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.anatomy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.anatomy-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.anatomy-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--tropical-teal);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.anatomy-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--ocean-blue), var(--tropical-teal));
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+}
+
+.anatomy-card h3 {
+    font-size: 1.5rem;
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.anatomy-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Nutrition Section */
+.nutrition-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.nutrition-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--deep-ocean);
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.nutrition-card {
+    background: linear-gradient(135deg, var(--soft-blue), white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nutrition-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--coral-pink);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.nutrition-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--coral-pink), var(--warm-sand));
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nutrition-card h3 {
+    font-size: 1.5rem;
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.nutrition-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Conservation Section */
+.conservation-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--pearl-white), var(--sea-foam));
+}
+
+.conservation-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--deep-ocean);
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.conservation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.conservation-text h3 {
+    font-size: 2rem;
+    color: var(--deep-ocean);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.conservation-text p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.conservation-text h4 {
+    color: var(--ocean-blue);
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.conservation-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conservation-text li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--tropical-teal);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conservation-tips h3 {
+    font-size: 1.8rem;
+    color: var(--deep-ocean);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.tip-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    border-color: var(--coral-pink);
+    transform: translateX(10px);
+}
+
+.tip-card h4 {
+    color: var(--ocean-blue);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .education-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-decorations {
+        gap: 2rem;
+    }
+    
+    .decoration {
+        font-size: 2rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .category-card {
+        padding: 2rem;
+    }
+    
+    .conservation-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .anatomy-grid,
+    .nutrition-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    .anatomy-card,
+    .nutrition-card {
+        padding: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 2.2rem;
+    }
+}
